@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
+
+
+
+sjs.open("target", 700,700);
+var background = new sjs.Image("Images/index4.gif")
+background.setSize(sjs.getWidth(), sjs.getHeight())
+setTimeout(function(){
+window.location = "level1.html";
+}, 4000);
+
+
+
+}
+</script>
+</head>
+<body onload="start()">
+<div id="target" style="margin:auto;background:gray;"></div>
+</body>
+</html>
