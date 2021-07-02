@@ -7,16 +7,14 @@
 function start(){
 sjs.open();
 
-sjs.keyDown(SPACE_KEY, function(){
-window.location = "Index2.html";
 
-
-info_text.bottom().centerH();
-});
 
 sjs.open("target", 700,700);
-var background = new sjs.Image("Images/index.png");
-background.setSize(sjs.getWidth(), sjs.getHeight());
+var background = new sjs.Image("Images/index4.gif")
+background.setSize(sjs.getWidth(), sjs.getHeight())
+setTimeout(function(){
+window.location = "level1.html";
+}, 4000);
 
 
 
@@ -27,5 +25,3 @@ background.setSize(sjs.getWidth(), sjs.getHeight());
 <div id="target" style="margin:auto;background:gray;"></div>
 </body>
 </html>
-
-
