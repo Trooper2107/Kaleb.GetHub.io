@@ -7,12 +7,15 @@
 function start(){
 sjs.open();
 
+sjs.keyDown(SPACE_KEY, function(){
+window.location = "Index2.html";
 
 
-
+info_text.bottom().centerH();
+});
 
 sjs.open("target", 700,700);
-var background = new sjs.Image("Images/Level2index.gif");
+var background = new sjs.Image("Images/index.png");
 background.setSize(sjs.getWidth(), sjs.getHeight());
 
 
