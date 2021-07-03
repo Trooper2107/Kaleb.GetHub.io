@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> level 1 </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+var level = [];
+
+
+function start(){
+sjs.open("target", 800, 800);
+var background = new sjs.Image("Images/backround.png");
+background.setSize(sjs.getWidth(), sjs.getHeight());
+var testBtn = new sjs.Button("Test", function(){
+
+localStorage.setItem('level', sjs.saveImageArray(level));
+
+window.open('test.html', '_blank');
+});
+
+
+var player = new sjs.Image("Images/Player 1.png");
+player.type = "player";
+player.setSize(50,50);
+
+sjs.keyDown(RIGHT_KEY, function(){
+player.setImage("Images/Player 1.png");
+player.pushRight();
+});
+sjs.keyDown(LEFT_KEY, function(){
+player.setImage("Images/Player 1.png");
+player.pushLeft();
+});
+sjs.keyDown(UP_KEY, function(){
+player.pushUp();
+});
+sjs.keyDown(DOWN_KEY, function(){
+player.pushDown();
+});
+
+
+//onhit
+//bounce
+sjs.onHit("player","wall", function(player,wall){
+sjs.bounceOff(player,wall);
+});
+}
+
+function wall(){
+level.push(wall);
+var wall = new sjs.Image("Images/wall.png");
+wall.type = "wall";
+wall.setHeight(100);
+wall.center().offset(-sjs.gx,10);
+wall.onMouseDown(function(){
+wall.draggable();
+wall.follow(sjs.mouse);
+});
+}
+
+</script>
+</heaSd>
+<body onload="start()">
+<h1> Maze<h/>
+<center>
+<input type="image" src="Images/wall.png" onclick="wall()">
+</center>
+
+
+<div id="target" style="margin:auto;background:gray;"></div>
+</body>
+</html>
