@@ -6,10 +6,9 @@
 <script>
 function start(){
 sjs.open();
-var score = 0;
-var scoret = new sjs.Text("Your Score: ", 21, "gold");
-score.setText("Score: "+localStorage.getItem("score"));
 
+var score_txt = new sjs.Text("Your Score: ", 21, "gold");
+score_txt.setText("Score: "+localStorage.getItem("score"));
 
 sjs.open("target", 700,700);
 
