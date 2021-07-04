@@ -7,8 +7,8 @@
 function start(){
 sjs.open();
 var score = 0;
-var score = new sjs.Text("Your Score: ", 21, "gold"); score.setText("Score: "+localStorage.getItem("score"));
-
+var scoret = new sjs.Text("Your Score: ", 21, "gold");
+score.setText("Score: "+localStorage.getItem("score"));
 
 
 sjs.open("target", 700,700);
