@@ -42,7 +42,9 @@ player.pushDown();
 });
  
 var score = 0;
-var score_txt = new sjs.Text("Score: 0", 21, "gold");
+var score_txt = new sjs.Text("Score: 0", 21, "green");
+score_txt.right().offset(-20, 0);
+score_txt.fixed = true;
  
 var song = new Audio("https://s3-us-west-2.amazonaws.com/simplycoding/GameDesignVideos/Images/mountain.mp3");
 
