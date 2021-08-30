@@ -44,6 +44,10 @@ sjs.keyDown(D_KEY, function(){
 paddle2.pushRight();
 });
 
+    sjs.keyDown(S_KEY, function(){
+paddle2.pushdown();
+});
+    
 //bounce
 sjs.onHit("ball","paddle", function(ball,paddle){
 sjs.bounceOff(ball,paddle);
