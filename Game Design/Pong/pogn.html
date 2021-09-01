@@ -14,8 +14,8 @@ ball.moveTo(175,300);
 ball.bottom().right().offset(-200,-250);
 ball.center();
 ball.friction = 0;
-ball.pushUp(5);
-ball.pushRight(5);
+ball.pushUp(7);
+ball.pushRight(7);
 ball.bounce();
 
 //Paddle 1
@@ -45,7 +45,7 @@ paddle2.pushRight();
 });
 
     sjs.keyDown(S_KEY, function(){
-paddle2.pushdown();
+paddle2.pushup();
 });
     
 //bounce
